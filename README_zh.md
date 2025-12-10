@@ -33,8 +33,14 @@
 
 说明：
 
-- Wenet Meeting 反映了包含噪声和语音重叠的真实会议场景。
-- Aishell-1 是标准普通话基准测试集。
+* Wenet Meeting 反映了包含噪声和语音重叠的真实会议场景。
+* Aishell-1 是标准普通话基准测试集。
+
+## 模型下载
+
+| Model             | Download Links                                                                                                                                             |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GLM-ASR-Nano-2512  | [🤗 Hugging Face](https://huggingface.co/zai-org/GLM-ASR-Nano-2512)<br>[🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/GLM-ASR-Nano-2512)               |
 
 ## 推理
 

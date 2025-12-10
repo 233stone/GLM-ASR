@@ -30,15 +30,21 @@ Key capabilities include:
 
 ## Benchmark
 
-We evaluated GLM-ASR-Nano against leading open-source and closed-source models. The results demonstrate 
+We evaluated GLM-ASR-Nano against leading open-source and closed-source models. The results demonstrate
 that **GLM-ASR-Nano (1.5B)** achieves superior performance, particularly in challenging acoustic environments.
 
 ![Benchmark results](resources/bench.png)
 
 Notes:
 
-- Wenet Meeting reflects real-world meeting scenarios with noise and overlapping speech.
-- Aishell-1 is a standard Mandarin benchmark.
+* Wenet Meeting reflects real-world meeting scenarios with noise and overlapping speech.
+* Aishell-1 is a standard Mandarin benchmark.
+
+## Download
+
+| Model             | Download Links                                                                                                                                             |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| GLM-ASR-Nano-2512  | [🤗 Hugging Face](https://huggingface.co/zai-org/GLM-ASR-Nano-2512)<br>[🤖 ModelScope](https://modelscope.cn/models/ZhipuAI/GLM-ASR-Nano-2512)               |
 
 ## Inference
 
@@ -65,4 +71,3 @@ For the two example audio clips above, the model is able to produce accurate tra
 be careful not to allow fabric to become too hot which can cause shrinkage or in extreme cases scorch
 我还能再搞一个，就算是非常小的声音也能识别准确
 ```
-

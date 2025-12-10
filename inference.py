@@ -10,7 +10,6 @@ from transformers import (
     WhisperFeatureExtractor,
 )
 
-
 WHISPER_FEAT_CFG = {
     "chunk_length": 30,
     "feature_extractor_type": "WhisperFeatureExtractor",
@@ -25,6 +24,7 @@ WHISPER_FEAT_CFG = {
     "return_attention_mask": False,
     "sampling_rate": 16000,
 }
+
 
 def get_audio_token_length(seconds, merge_factor=2):
     def get_T_after_cnn(L_in, dilation=1):
@@ -42,6 +42,7 @@ def get_audio_token_length(seconds, merge_factor=2):
     audio_token_num = min(audio_token_num, 1500 // merge_factor)
 
     return audio_token_num
+
 
 def build_prompt(
     audio_path: Path,
@@ -157,7 +158,9 @@ def transcribe(
 
 def main():
     parser = argparse.ArgumentParser(description="Minimal ASR transcription demo.")
-    parser.add_argument("--checkpoint_dir", type=str, default=str(Path(__file__).parent))
+    parser.add_argument(
+        "--checkpoint_dir", type=str, default=str(Path(__file__).parent)
+    )
     parser.add_argument("--audio", type=str, required=True, help="Path to audio file.")
     parser.add_argument(
         "--tokenizer_path",
@@ -166,7 +169,9 @@ def main():
         help="Tokenizer directory (defaults to checkpoint dir when omitted).",
     )
     parser.add_argument("--max_new_tokens", type=int, default=128)
-    parser.add_argument("--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu")
+    parser.add_argument(
+        "--device", type=str, default="cuda" if torch.cuda.is_available() else "cpu"
+    )
     args = parser.parse_args()
 
     transcribe(
